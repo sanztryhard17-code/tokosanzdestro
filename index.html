@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOKO SANZ DESTROYER - QRIS SANZ</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
+body{background:#f8f9fa}
+.marquee{background:#dc2626;color:#fff;padding:7px 0;overflow:hidden;white-space:nowrap;font-size:13px;font-weight:700}
+.marquee span{display:inline-block;animation:jalan 20s linear infinite}
+@keyframes jalan{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+.header{background:#fff;padding:12px 4%;display:flex;align-items:center;gap:15px;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:20}
+.logo{width:58px;height:58px;object-fit:contain;border-radius:50%}
+.search{flex:1;max-width:520px}.search input{width:100%;padding:11px 15px 11px 40px;border:1px solid #d1d5db;border-radius:10px;background:#f3f4f6}
+.nav{background:#fff;padding:10px 4%;display:flex;gap:20px;overflow-x:auto;border-bottom:1px solid #e5e7eb;font-size:14px;font-weight:600}
+.nav .active{color:#2563eb;border-bottom:2.5px solid #2563eb}
+.banner{margin:15px 4%;background:linear-gradient(90deg,#1e40af,#3b82f6);border-radius:14px;padding:24px;color:#fff;display:flex;justify-content:space-between}
+.populer{margin:15px 4%;background:#fff;border-radius:14px;padding:20px}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:16px}
+.card{border:1.5px solid #e5e7eb;border-radius:12px;overflow:hidden;cursor:pointer;transition:0.2s}
+.card:hover{border-color:#2563eb;transform:translateY(-4px);box-shadow:0 10px 25px rgba(37,99,235,0.15)}
+.card img{width:100%;aspect-ratio:1;object-fit:cover}
+.card p{text-align:center;padding:10px 0;font-size:13px;font-weight:700}
+.detail{background:#fff;margin:15px 4%;border-radius:14px;padding:22px;display:none}
+.detail.active{display:block}
+.detail-grid{display:grid;grid-template-columns:320px 1fr;gap:26px}
+input{width:100%;padding:12px;border:1.5px solid #d1d5db;border-radius:10px;margin-top:8px}
+.nom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.nom{border:1.5px solid #d1d5db;border-radius:10px;padding:14px;text-align:center;cursor:pointer;background:#f9fafb}
+.nom b{color:#dc2626;display:block}.nom.sel{border-color:#2563eb;background:#eff6ff}
+.pay{border:1.5px solid #d1d5db;padding:12px;border-radius:10px;cursor:pointer;background:#fff;display:flex;align-items:center;gap:10px;font-weight:600;margin-top:8px}
+.pay.sel{border-color:#2563eb;background:#eff6ff}
+.qris-box{background:#f1f5f9;border:2px dashed #2563eb;border-radius:14px;padding:18px;text-align:center;margin-top:15px;display:none}
+.qris-box.active{display:block}
+.qris-box img{width:100%;max-width:340px;border-radius:10px;margin:12px auto;display:block;border:1px solid #ddd}
+.btn{width:100%;background:#2563eb;color:#fff;padding:15px;border:none;border-radius:12px;font-weight:800;font-size:16px;margin-top:18px;cursor:pointer}
+@media(max-width:600px){.grid{grid-template-columns:repeat(3,1fr)}.detail-grid{grid-template-columns:1fr}.nom-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<div class="marquee"><span>🔥 SANZ DESTROYER • QRIS SANZ NMID ID1026597875263 • WEEKLY 8K • MONTHLY 25K • 70 DM 5K • SCROLL PENCET FF MASUK KE DALEM → BAYAR PAKE QRIS LU LANGSUNG 🔥</span></div>
+
+<div class="header">
+<img src="logo.png" class="logo">
+<div class="search"><input placeholder="🔍 Cari Game dan Kode Voucher"></div>
+<div style="margin-left:auto;font-weight:600">🇮🇩 ID ▼</div>
+</div>
+
+<div class="nav">
+<span class="active">Populer</span><span>Game Mobile</span><span>PC Game</span><span>Voucher</span>
+</div>
+
+<div class="banner">
+<div><h2>Top Up Game Termurah</h2><p>Proses Instan • Harga Murah • Aman & Terpercaya</p><div style="background:#facc15;color:#000;padding:6px 12px;border-radius:20px;font-size:13px;font-weight:700;display:inline-block;margin-top:10px">QRIS SANZ - ID1026597875263</div></div>
+<div style="font-size:50px">🎮</div>
+</div>
+
+<div id="home" class="populer">
+<h3>Populer - Pencet Buat Masuk Ke Dalem</h3>
+<div class="grid">
+<div class="card" onclick="buka('ff')"><img src="https://cdn1.codashop.com/S/content/common/images/mno/freefire_512x512.jpg"><p>Free Fire</p></div>
+<div class="card" onclick="buka('ml')"><img src="https://cdn1.codashop.com/S/content/common/images/mno/mlbb_512x512.jpg"><p>Mobile Legends</p></div>
+<div class="card" onclick="buka('ff')"><img src="https://cdn1.codashop.com/S/content/common/images/mno/pubgm_512x512.jpg"><p>PUBG Mobile</p></div>
+<div class="card" onclick="buka('ml')"><img src="https://cdn1.codashop.com/S/content/common/images/mno/valorant_512x512.jpg"><p>Valorant</p></div>
+<div class="card" onclick="buka('ff')"><img src="https://cdn1.codashop.com/S/content/common/images/mno/genshin_512x512.jpg"><p>Genshin</p></div>
+<div class="card" onclick="buka('ml')"><img src="https://cdn1.codashop.com/S/content/common/images/mno/codm_512x512.jpg"><p>CODM</p></div>
+</div>
+</div>
+
+<div id="ff" class="detail">
+<button onclick="tutup()" style="border:none;background:none;color:#2563eb;font-weight:700;cursor:pointer">← Kembali</button>
+<h2 style="margin:12px 0">Free Fire - Masuk Dalem Berhasil 🔥</h2>
+<div class="detail-grid">
+<div>
+<h4>1. User ID</h4>
+<input id="uid" placeholder="Masukkan User ID">
+<h4 style="margin-top:18px">2. Pilih Nominal MURAH BANGET</h4>
+<div class="nom-grid">
+<div class="nom" onclick="pilihNom(this,'70 Diamonds','Rp 5.000')"><b>Rp 5.000</b>86 Diamonds<br><small style="color:green">SUPER CHEAP</small></div>
+<div class="nom" onclick="pilihNom(this,'140 Diamonds','Rp 9.000')"><b>Rp 9.000</b>172 Diamonds</div>
+<div class="nom" onclick="pilihNom(this,'Weekly','Rp 8.000')"><b>Rp 8.000</b>Weekly</div>
+<div class="nom" onclick="pilihNom(this,'Monthly','Rp 25.000')"><b>Rp 25.000</b>Monthly</div>
+<div class="nom" onclick="pilihNom(this,'Booyah Pass','Rp 10.000')"><b>Rp 10.000</b>Booyah</div>
+<div class="nom" onclick="pilihNom(this,'355 Diamonds','Rp 20.000')"><b>Rp 20.000</b>355 Diamonds</div>
+</div>
+</div>
+
+<div>
+<h4>3. Metode Pembayaran - Pilih QRIS LU!</h4>
+<div class="pay sel" onclick="pilihPay(this,'QRIS SANZ')"><b style="color:#dc2626">🔥 QRIS SANZ</b> - NMID ID1026597875263 <span style="margin-left:auto">✅</span></div>
+<div class="pay" onclick="pilihPay(this,'DANA')">💙 DANA</div>
+<div class="pay" onclick="pilihPay(this,'OVO')">💜 OVO</div>
+<div class="pay" onclick="pilihPay(this,'GoPay')">💚 GoPay</div>
+<div class="pay" onclick="pilihPay(this,'BCA VA')">🏦 BCA VA</div>
+
+<!-- INI QRIS LU MUNCUL DISINI PAS METODE QRIS DIPILIH -->
+<div id="qrisBox" class="qris-box active">
+<h3 style="color:#1e40af">PEMBAYARAN QRIS - SANZ</h3>
+<p style="font-size:13px">NMID : ID1026597875263 - A01</p>
+<p style="font-size:13px;margin-top:6px">Scan QRIS untuk menyelesaikan pembayaran</p>
+<img src="qris.png" alt="QRIS SANZ">
+<p style="font-size:13px">Buka e-wallet / mobile banking lalu scan</p>
+<div style="background:#fff;border:1px solid #2563eb;border-radius:8px;padding:10px;display:flex;justify-content:space-between;margin-top:10px">
+<span>Total Bayar</span><b id="totalBayar" style="color:#1e40af;font-size:20px">Rp 5.000</b>
+</div>
+<p style="font-size:12px;margin-top:8px">Paket: <b id="paketView">Belum pilih</b> | ID: <b id="idView">-</b></p>
+</div>
+
+<button class="btn" onclick="konfirmasi()">Konfirmasi Pembayaran 💳</button>
+<p style="font-size:11px;text-align:center;margin-top:8px;color:#666">Pembayaran otomatis terkonfirmasi • Batas waktu 15:00</p>
+</div>
+</div>
+</div>
+
+<div id="ml" class="detail">
+<button onclick="tutup()" style="border:none;background:none;color:#2563eb;font-weight:700">← Kembali</button>
+<h2>Mobile Legends</h2>
+<div class="detail-grid">
+<div><input placeholder="User ID"><input placeholder="Server" style="margin-top:8px"></div>
+<div><div class="nom-grid"><div class="nom"><b>Rp 5.000</b>86 DM</div></div><button class="btn">Bayar</button></div>
+</div>
+</div>
+
+<script>
+let paket='';let harga='Rp 0';
+function buka(id){
+  document.getElementById('home').style.display='none';
+  document.querySelectorAll('.detail').forEach(d=>d.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function tutup(){
+  document.getElementById('home').style.display='block';
+  document.querySelectorAll('.detail').forEach(d=>d.classList.remove('active'));
+}
+function pilihNom(el,nama,hrg){
+  document.querySelectorAll('#ff .nom').forEach(n=>n.classList.remove('sel'));
+  el.classList.add('sel');
+  paket=nama; harga=hrg;
+  document.getElementById('paketView').innerText=nama+' '+hrg;
+  document.getElementById('totalBayar').innerText=hrg;
+  document.getElementById('idView').innerText=document.getElementById('uid').value||'-';
+}
+function pilihPay(el,metode){
+  document.querySelectorAll('.pay').forEach(p=>p.classList.remove('sel'));
+  el.classList.add('sel');
+  if(metode.includes('QRIS')){
+    document.getElementById('qrisBox').classList.add('active');
+  } else {
+    document.getElementById('qrisBox').classList.remove('active');
+  }
+}
+function konfirmasi(){
+  let uid=document.getElementById('uid').value;
+  if(!uid){alert('Isi User ID dulu ege!');return;}
+  if(!paket){alert('Pilih nominal dulu yang Rp 5.000 murah banget!');return;}
+  alert(`✅ PESANAN DIBUAT!\n\nID: ${uid}\nPaket: ${paket}\nTotal: ${harga}\nMetode: QRIS SANZ ID1026597875263\n\nSilahkan scan QRIS SANZ yang muncul di layar!\nSetelah bayar, konfirmasi ke WA @sanzsunda05`);
+}
+</script>
+</body>
+</html>
